@@ -7,7 +7,8 @@ const MyMovies = ()=>{
     let [s,sets] = useState("");
     let {data1,setSearch} = useContext(MoviesContext);
         console.log("data : ",data1);
-        function handleClick(){
+        function handleClick(e){
+            e.preventDefault();
             setSearch(s);
         }
     return (
@@ -19,7 +20,7 @@ const MyMovies = ()=>{
             <button onClick={handleClick}>Search</button>
             </form>
 
-            <ul>
+            {/* <ul> */}
                 {
                     !data1 && <div className="error">Invalid movie name. Please try again.</div>
                 }
@@ -33,7 +34,7 @@ const MyMovies = ()=>{
 
                     
                 }
-            </ul>
+            {/* </ul> */}
         </>
     )
 }
