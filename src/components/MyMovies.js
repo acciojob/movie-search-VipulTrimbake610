@@ -13,8 +13,11 @@ const MyMovies = ()=>{
     return (
         <>
             <h1>Search Movie</h1>
+            <form action="">
+                
             <input type="text" onChange={(e)=>sets(e.target.value)}/>
             <button onClick={handleClick}>Search</button>
+            </form>
 
             <ul>
                 {
